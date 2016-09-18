@@ -7,7 +7,7 @@
 <body>
   <script>
     var httpRequest = new XMLHttpRequest();
-    httpRequest.open('GET', 'data.json', true);
+    httpRequest.open('GET', 'http://127.0.0.1:8080', true);
     httpRequest.send(null);
 
     httpRequest.onreadystatechange = function(){

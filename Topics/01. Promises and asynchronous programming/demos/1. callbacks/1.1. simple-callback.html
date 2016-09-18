@@ -9,10 +9,14 @@
 
     <script>
         var dropBomb = (function() {
-            return function() {
+            return function run() {
                 setTimeout(function () {
                     document.getElementById("bomb").innerHTML = "BOOOM";
-                }, 3000);
+                    setTimeout(function () {
+                        document.getElementById("bomb").innerHTML = new Date().toDateString();
+                    }, 1000);
+                    run();
+                }, 2000);
             }
         }());
         
